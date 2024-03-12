@@ -184,13 +184,43 @@ ul{
 }
 
 /*responsive*/
-@media(max-width: 767px){
+@media (max-width: 920px){
+
+  .logo {
+    font-size: 17px;
+  }
+
+  nav a{
+    font-size: 12px;
+  }
+
+  .main img {
+    width: 70%;
+  }
+
+  .main {
+    width: 50%;
+  }
+
   .footer-col {
     width: 50%;
     margin-bottom: 30px;
+    text-align: center;
   }
+
+  .footer-col h4::before{
+    content: '';
+    left: 0px;
+    position: absolute;
+    bottom: -10px;
+    background-color: #24262b;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }  
+  
 }
-@media(max-width: 574px){
+@media (max-width: 600px){
   .footer-col {
     width: 100%;
   }
