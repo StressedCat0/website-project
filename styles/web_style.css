@@ -81,6 +81,10 @@ nav a.active {
   padding: 20px;
 }
 
+.main img {
+  width: 800px
+}
+
 /*social icoms hover*/
 .socialicons i{
   transition: all 0.5s ease;
