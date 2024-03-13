@@ -232,7 +232,7 @@ ul{
       right: 0;
       width: 100vw;
       background: #11101b;
-      transition: all 0.5s ease;
+      transition: 0.5s;
       overflow: hidden;
   }
 
@@ -245,7 +245,7 @@ ul{
       width: fit-content;
       margin: 80px auto 0 auto;
       text-align: center;
-      transition: all 0.5s ease;
+      transition: 0.5s;
       opacity: 0;
   }
 
