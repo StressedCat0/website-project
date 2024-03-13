@@ -25,38 +25,57 @@ body {
   background-size: 100% 100%;
 }
 
+* {
+	margin: 0;
+	padding: 0;
+  list-style: none;
+  text-decoration: none;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
 header {
-  top: 0;
-  left: 0;
   width: 100%;
-  padding: 15px 120px;
-  background: #11141a;
+  height: 80px;
+  background: #11101b;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  z-index: 100; 
+  justify-content: space-between;
+  padding: 0 100px;
 }
 
 .logo {
-  font-size: 23px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fefefe;
 }
 
-nav a{
-  font-family: "Poppins", sans-serif;
+.hamburger {
+  display: none;
+}
+
+.nav-bar ul {
+  display: flex;
+}
+
+.nav-bar ul li a {
+  display: block;
+  color: #fefefe;
   font-size: 18px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 400;
-  margin-left: 35px;
-  transition: 0.4s;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  margin: 0 5px;
 }
 
-nav a:hover,
-nav a.active {
-  color: #0ef;
+.nav-bar ul li a:hover {
+  color: #11101b;
+  background: #fefefe;
+}
+
+.nav-bar ul li a.active {
+  color: #11101b;
+  background: #fefefe;
 }
 
 /* Column container */
@@ -66,12 +85,12 @@ nav a.active {
 }
 
 /* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
+/* Sidebar/right column */
 .side {
-  flex: 30%;
-  text-align: center;
+  flex: 20%;
   background-color: #f1f1f1;
-  padding: 20px;
+  text-align: center;
+  padding: 10px;
 }
 
 /* Main column */
@@ -80,12 +99,11 @@ nav a.active {
   background-color: white;
   padding: 20px;
 }
-
 .main img {
-  width: 800px
+  width: 800px;
 }
 
-/*social icoms hover*/
+/*social icons hover*/
 .socialicons i{
   transition: all 0.5s ease;
   color: #111;
@@ -189,18 +207,66 @@ ul{
 }
 
 /*responsive*/
+@media (max-width: 1000px) {
+  header {
+      padding: 0 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hamburger {
+      display: block;
+      cursor: pointer;
+  }
+  .hamburger .line {
+      width: 30px;
+      height: 3px;
+      background: #fefefe;
+      margin: 6px 0;
+  }
+  .nav-bar {
+      height: 0;
+      position: absolute;
+      top: 350px;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      background: #11101b;
+      transition: all 0.5s ease;
+      overflow: hidden;
+  }
+
+  .nav-bar.active {
+      height: 450px;
+  }
+
+  .nav-bar ul {
+      display: block;
+      width: fit-content;
+      margin: 80px auto 0 auto;
+      text-align: center;
+      transition: all 0.5s ease;
+      opacity: 0;
+  }
+
+  .nav-bar.active ul {
+      opacity: 1;
+  }
+
+  .nav-bar ul li a {
+      margin-bottom: 20px;
+  }
+}
+
 @media (max-width: 920px){
 
-  .logo {
-    font-size: 17px;
-  }
-
-  nav a{
-    font-size: 12px;
-  }
+  header {
+    padding: 0 30px;
+}
 
   .main img {
     width: 70%;
+    text-align: center;
   }
 
   .main {
